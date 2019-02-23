@@ -15,14 +15,10 @@ body * {
 .parent{
     background-color: #131313;
     text-align: center;
-   
-    
 }
 
-.main-content{
-    width: 60%;
-    margin: 0 auto;
-}
+
+
 
 .a{
     display: inline-block;
@@ -43,13 +39,72 @@ body * {
 
 .class:hover{
     color: #9e130c;
-    
-    
 }
 
 .main-body{
+    display: block;
     background: url(./../img/Main-Body.png) no-repeat center top / cover;
     height: 622px;
+    
+  }  
+
+.main-content{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    outline: 2px solid yellow;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+
+.to-turn{
+    display: flex;
+    height: 190px;
+    width: 190px;
+    background-color: rgba(197, 202, 205, 0.7);
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    justify-content: center; 
+    align-items: center;
+    margin: 55px;
+}
+
+.main-content-a{
+   
+    
+    height: 100%;
+    width: 100%;
+}
+
+.to-turn-img {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0
+    
+    
+}
+/*.main-content{
+    
+  position: absolute;  
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+    
     
 }
 
@@ -61,7 +116,14 @@ body * {
   -o-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+ 
+  position: absolute;
+  top:-100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
+  
 }
 
 .td{
@@ -76,3 +138,12 @@ body * {
     display: block;
     margin: auto;
 }
+
+.activ{
+    background-color: rgba(197, 202, 205, 0.8)
+}
+
+.table-a{
+
+}*/
+
