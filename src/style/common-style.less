@@ -6,18 +6,30 @@ body * {
     outline: 1px solid red;
 }
 
+@font-face {
+    font-family: my_font;
+    src: url('../fonts/14737.otf');
+}
+
 *{
-    font-family: Arial, sans-serif;
+    font-family: my_font, Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .parent{
     background-color: #131313;
+    width: 100%;
+    position: fixed;
     text-align: center;
+    
 }
 
-
+.nav{
+    height: 130px;
+    width: 60%;
+    margin: 0 auto;
+}
 
 
 .a{
@@ -41,10 +53,14 @@ body * {
     color: #9e130c;
 }
 
+.mainly {
+    padding-top: 130px;
+}
+
 .main-body{
     display: block;
     background: url(./../img/Main-Body.png) no-repeat center top/cover;
-    // height: 622px;
+    height: 622px;
     
   }  
 
