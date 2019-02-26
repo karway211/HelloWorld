@@ -17,10 +17,16 @@ body * {
     padding: 0;
 }
 
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
 .parent{
     background-color: #131313;
     width: 100%;
-    position: fixed;
+    
     text-align: center;
     
 }
@@ -59,25 +65,29 @@ body * {
 
 .main-body{
     display: block;
-    background: url(./../img/Main-Body.png) no-repeat center top/cover;
+    background: url(./../img/Main-Body.png) no-repeat center top / cover;
     height: 622px;
     
   }  
-
 .main-content{
-    width: 60%;
+    max-width: 1170px;
+}
+.dimonds{
+    max-width: 1170px;
     margin: 0 auto;
     display: flex;
-    outline: 2px solid yellow;
-    align-items: center;
-    align-content: center;
     flex-wrap: wrap;
+    outline: 2px solid yellow;
     justify-content: center;
+    background-size: cover;
+    padding: 40px 0 ;
+    
+    
 
     
 }
 
-.to-turn{
+.dimonds__item{
     display: flex;
     height: 190px;
     width: 190px;
@@ -90,17 +100,49 @@ body * {
     transform: rotate(-45deg);
     justify-content: center; 
     align-items: center;
-    margin: 55px;
-}
-
-.main-content-a{
-   
+    align-content: space-between;
+    margin: 25px;
+    z-index: 1;
     
-    height: 100%;
-    width: 100%;
 }
 
-.to-turn-img {
+.dimonds_element{
+    display: flex;
+   border: 1px solid yellow;
+    height: 190px;
+    width: 190px;
+    justify-content: center; 
+    align-items: center;
+    
+   
+}
+
+
+
+
+
+.dimonds_element-layer{
+    display: flex;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+    
+   
+}
+
+.hover{
+    background-color: red;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    transition: .2s linear;
+}/*
+
+.dimonds_element-layer {
+    display: flex;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -110,6 +152,11 @@ body * {
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0
     
+    
+}
+
+.hover{
+    display: fle;
     
 }
 /*.main-content{
