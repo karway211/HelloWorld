@@ -80,7 +80,7 @@ header{
     outline: 2px solid yellow;
     justify-content: center;
     background-size: cover;
-    padding: 40px 0 ;
+    padding: 40px 0;
     
     
 
@@ -92,6 +92,7 @@ header{
     height: 190px;
     width: 190px;
     background-color: rgba(197, 202, 205, 0.7);
+    
 
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -101,7 +102,7 @@ header{
     justify-content: center; 
     align-items: center;
     align-content: space-between;
-    margin: 25px;
+    margin: 25px 50px;
     z-index: 1;
     
 }
@@ -113,8 +114,6 @@ header{
     width: 190px;
     justify-content: center; 
     align-items: center;
-    
-   
 }
 
 
@@ -123,42 +122,70 @@ header{
 
 .dimonds_element-layer{
     display: flex;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    
+    width: 190px;
+    height: 190px;
+    position: absolute;
     
    
 }
 
-.hover{
-    background-color: red;
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    transition: .2s linear;
-}/*
 
-.dimonds_element-layer {
+.main-content-a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center; 
+    align-items: center;
+   
+   
+}
+
+.to-slue{
     display: flex;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0
-    
     
 }
 
-.hover{
-    display: fle;
-    
+.dimonds_element_img{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
 }
+
+.dimonds_element-layer.hidden{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.dimonds_element:hover .dimonds_element-layer.hidden{
+    visibility: visible;
+    width: 190px;
+    height: 190px;
+    background-color: rgba(167, 57, 53, 0.7);
+}
+
+
+
+.stub {
+	display: none;
+    width: 16.5%;}
+
+span{
+    text-align: center;
+    color: #ffffff;
+}    
+
+
 /*.main-content{
     
   position: absolute;  
