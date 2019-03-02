@@ -89,29 +89,28 @@ header{
 
 .dimonds__item{
     display: flex;
-    height: 190px;
-    width: 190px;
-    background-color: rgba(197, 202, 205, 0.7);
-    
-
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    width: 25%;
+    min-width: 250px;
+    //background-color: rgba(197, 202, 205, 0.7);
     justify-content: center; 
     align-items: center;
-    align-content: space-between;
-    margin: 25px 50px;
     z-index: 1;
     
 }
 
 .dimonds_element{
     display: flex;
-   border: 1px solid yellow;
+    border: 1px solid yellow;
+    position: relative;
     height: 190px;
     width: 190px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: rgba(197, 202, 205, 0.7);
+    overflow: hidden;
     justify-content: center; 
     align-items: center;
 }
@@ -122,9 +121,14 @@ header{
 
 .dimonds_element-layer{
     display: flex;
-    width: 190px;
     height: 190px;
+    width: 190px;
     position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+     transform: rotate(-45deg);
     
    
 }
@@ -136,104 +140,65 @@ header{
     width: 100%;
     justify-content: center; 
     align-items: center;
-   
-   
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .to-slue{
     display: flex;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     
 }
 
 .dimonds_element_img{
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .dimonds_element-layer.hidden{
+    position: absolute;
+    background-color: rgba(167, 58, 54, 0.7);
     height: 0;
     width: 0;
     visibility: hidden;
 }
 
 .dimonds_element:hover .dimonds_element-layer.hidden{
+    position: absolute;
     visibility: visible;
     width: 190px;
     height: 190px;
-    background-color: rgba(167, 57, 53, 0.7);
+    display: flex;
+    height: 140%;
+    width: 140%;
+    transition: .2s linear;
+    
 }
-
-
 
 .stub {
 	display: none;
     width: 16.5%;}
 
+    @media screen and (max-width: 940px) {
+        .dimonds__item {
+            width: 33%;
+        }
+    
+        .stub {
+            display: block;
+        }
+    }
+    
+
 span{
     text-align: center;
     color: #ffffff;
+    
 }    
 
 
-/*.main-content{
-    
-  position: absolute;  
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-    
-    
-}
-
-.table{
-    height: 840px;
-    width: 840px;
-    -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
- 
-  position: absolute;
-  top:-100px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  
-}
-
-.td{
-    width: 190px;
-    height: 190px;
-    float: left;
-    margin: 10px;
-    color: yellow;
-}
-
-.td p{
-    display: block;
-    margin: auto;
-}
-
-.activ{
-    background-color: rgba(197, 202, 205, 0.8)
-}
-
-.table-a{
-
-}*/
 
