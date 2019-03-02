@@ -1,7 +1,81 @@
-html {
-    outline: 1px solid green;
+body{
+    padding-top: 100px;
 }
 
-body * {
+.block{
     outline: 1px solid red;
+}
+
+/*.parent{
+    height: 300px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+
+} ниже объединил стили*/
+
+.additional{
+    width: 400px;
+    height: 150px;
+    margin: 15px auto;
+
+}
+
+.child{
+    width: 50%;
+    height: 50%;
+}
+
+.center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.parent .class2 .class3{
+    background-color: red;
+}
+
+.parent {
+    height: 300px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    .class2{
+        background-color: yellow;
+    }
+}
+/*.class3.center{
+    background-color: blue;
+}*/
+
+ .parent>.class3 {
+    background-color: blue;
+    //border-radius: 50%;
+    //border-radius: 70px 10px;
+    border-bottom-right-radius: 50% 38px;
+}
+
+/*---------------*/
+
+.container{
+    outline: 1px dotted green;
+}
+
+.item{
+    height: 100px;
+}
+
+.left-nav, .right-nav, .main-content{
+    display: inline-block;
+}
+
+.main-content{
+  width: calc(100% - 408px);
+}
+
+.left-nav, .right-nav {
+    width: 200px;
+    background-color: blue;
 }
