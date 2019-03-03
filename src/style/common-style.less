@@ -3,7 +3,7 @@ html {
 }
 
 body * {
-    outline: 1px solid red;
+    outlin: 1px solid red;
 }
 
 @font-face {
@@ -13,23 +13,81 @@ body * {
 
 *{
     font-family: my_font, Arial, sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
+    
 }
-
+/*----------------header---------------------*/
 header{
+    display: block;
     position: fixed;
     width: 100%;
     z-index: 2;
+    background-color: #131313;
+    
+    
 }
 
 .parent{
-    background-color: #131313;
+    display: block;
     width: 100%;
-    
     text-align: center;
+
     
 }
+/*--------------header-mobile----------------------*/
+
+.parent-mobile{
+    display: none;
+    max-width: 770px;
+    
+    text-align: center;
+    margin: 0 auto;
+}
+
+.a-mob{
+    display: block;
+    width: 259px;
+    margin:auto;
+    position: relative;
+    padding: 24px 0;
+}
+
+.ul-menu{
+    display: none;
+    background-color:  #131313;
+    
+}
+
+.class-mob{
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #b3b3b3;
+    width: 100%;
+    height: 100%;
+     padding: 15px 0;
+}
+
+.a-mob:hover .ul-menu{
+    display: block;
+    position: absolute;
+    width: 259px;
+    
+}
+
+.ul-menu li{
+    border-bottom: 1px solid  #b3b3b3;
+    list-style-type: none;
+
+}
+
+.ul-menu > li:hover{
+    background-color: #353535;
+}
+
+/*-----------------/header-mobile---------------*/
 
 .nav{
     height: 130px;
@@ -59,6 +117,17 @@ header{
     color: #9e130c;
 }
 
+@media screen and (max-width: 1155px){
+    .parent-mobile{
+        display: block;
+    }
+    .parent{
+        display: none;
+    }
+}
+/*---------------------/header---------------*/
+/*--------------------main-----------------*/
+
 .mainly {
     padding-top: 130px;
 }
@@ -66,21 +135,24 @@ header{
 .main-body{
     display: block;
     background: url(./../img/Main-Body.png) no-repeat center top / cover;
-    height: 622px;
+    min-height: 622px;
+    
     
   }  
 .main-content{
+    display: block;
     max-width: 1170px;
+    margin: 0 auto;
 }
 .dimonds{
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    outline: 2px solid yellow;
+    outlin: 2px solid yellow;
     justify-content: center;
     background-size: cover;
-    padding: 40px 0;
+    padding: 100px 0;
     
     
 
@@ -100,7 +172,7 @@ header{
 
 .dimonds_element{
     display: flex;
-    border: 1px solid yellow;
+    borde: 1px solid yellow;
     position: relative;
     height: 190px;
     width: 190px;
@@ -109,7 +181,7 @@ header{
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: rgba(197, 202, 205, 0.7);
+    background-color: rgba(197, 202, 205, 0.8);
     overflow: hidden;
     justify-content: center; 
     align-items: center;
@@ -145,6 +217,8 @@ header{
     -o-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    text-decoration: none;
+    
 }
 
 .to-slue{
@@ -198,7 +272,45 @@ span{
     text-align: center;
     color: #ffffff;
     
-}    
+}  
+
+/*----------------/section main body------------*/
+/*---------------section portfolio-------------*/
+
+.portfolio{
+    display: block;
+    background-color: #ffffff;
+}
+
+.portfolio-body_nav_item{
+    display: inline-block;
+    margin: 15px;
+    
+}
+
+.portfolio-body_nav_item:nth-child(1){
+    margin-left: 0;
+}
+
+.portfolio-body_nav_item_a{
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.portfolio-body h2{
+    font-size: 38px;
+    text-transform: capitalize;
+}
+
+.portfolio-body_nav_item_a:hover{
+    border-bottom: 4px solid #9e130c;
+}
+
+.portfolio-body_nav_item_a.selected{
+    border-bottom: 4px solid #9e130c;
+}
 
 
 
