@@ -1,14 +1,31 @@
-.product-item{
-
-    width: 60%;
-    margin: 0 auto;
-}
-
-
 .product-logo{
     background-color: black;
     text-align: center;
     
+}
+
+.product-logo__drop-down{
+    border: 1px solid yellow;
+    display: none;
+}
+
+.product-logo:hover .product-logo__drop-down{
+    
+    display: inline-block;
+    position: absolute;
+    
+}
+
+.product-logo__drop-down a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.product-item{
+
+    width: 60%;
+    margin: 0 auto;
 }
 
 .product-item_imades{
@@ -26,6 +43,11 @@
     vertical-align: top;
 }
 
+
+.product-item_img img{
+    max-width: 100%;
+    max-height: 100%;
+}
 
 .product-item_title{
     text-align: center;
