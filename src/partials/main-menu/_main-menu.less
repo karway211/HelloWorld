@@ -1,0 +1,41 @@
+.main-menu{
+    display: flex;
+    outline: 1px solid green;
+    
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-around;
+
+}
+
+.main-menu__item{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+.main-menu__item--top, .main-menu__item--bottom {
+    padding: 10px 0;
+    
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+
+
+.main-menu__item:focus::before {
+        content: ''; 
+        left: 50%; top: 0; 
+        transform: translateX(-50%);
+        width: 0; height: 0;
+        border-style: solid;
+        border-width: 10px;
+        border-color:   #000 transparent transparent;
+        position: absolute;
+    }
+
+
+
+
+
