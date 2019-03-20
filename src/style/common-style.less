@@ -4,4 +4,42 @@ html {
 
 body * {
     outline: 1px solid red;
+    //padding: 50px;
+}
+
+label {
+    display: block;
+}
+
+form {
+   // margin: 50px;
+}
+
+[type='radio']:checked,
+[type='checkbox']:checked{
+    color: red;
+}
+
+.accordion{
+    width: 500px;
+    margin: 0 auto;
+    &__capture,
+    &__description{
+        border: 1px solid #000;
+    }
+    
+}
+input{
+    display: none;
+}
+#close:checked ~ .accordion__description{
+    height: 0px;
+    overflow: hidden;
+}
+
+#close:checked ~ .accordion__capture [for='close'] {
+    display: none;
+}
+#open:checked ~ .accordion__capture [for='open'] {
+    display: none;
 }
