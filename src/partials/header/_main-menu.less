@@ -1,7 +1,8 @@
 
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: stretch;
     max-width: 940px;
     margin: 0 auto;
     
@@ -10,19 +11,23 @@
 .logo-Pacifico {
     display: inline-block;
     font-family: Pacifico;
-    font-size: 3.5em;
+    font-size: 2.6em;
     color: #474747;
     text-decoration: none;
     text-transform: capitalize;
+    outline: 1px solid red;
+    padding: 23px 0 0 8px;
     
 }
 
 .main-menu{
     display: flex;
+    width: 63%;
+    justify-content: space-between;
+    align-items: stretch;
     
     
-    width: 60%;
-    justify-content: space-around;
+    
     
 
 }
@@ -30,31 +35,29 @@
 .main-menu__item{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     position: relative;
     text-decoration: none;
-    height: 100%;
+    padding: 40px 0 45px 0;
+   
 }
 
 .main-menu__item--top, .main-menu__item--bottom {
     font-family: Bebas;
-    
     text-transform: uppercase;
-    //text-align: center;
-    
+   
 }
 .main-menu__item--top{
-    font-size: 1em;
+    font-size: 0.75em;
     color: #acacac;
 }
 .main-menu__item--bottom{
-    font-size: 1.7em;
+    font-size: 1.25em;
     color: #474747;
 }
 
 
 
-.main-menu__item:focus::before {
+.main-menu__item:hover::before {
         content: ''; 
         left: 50%; top: 0; 
         transform: translateX(-50%);
@@ -63,6 +66,7 @@
         border-width: 10px;
         border-color:   #ececec transparent transparent;
         position: absolute;
+        
     }
 
 
