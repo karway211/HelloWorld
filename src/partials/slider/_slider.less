@@ -1,7 +1,4 @@
-.slider{
-    //margin-top: 3.2em;
-    outline: 1px solid yellow;
-}
+
 
 .slider-content{
     display: block;
@@ -10,42 +7,93 @@
     position: relative;
 }
 
-//.slider-content__wallpaper {
-    //display: flex;
-    //background: url(./../img/img.png) no-repeat center top / cover;
-    //min-height: 425px;
-    //justify-content: space-between;
-    //align-items: flex-end;
-//}
+.slider-content::before {
+    content: ''; 
+    left: 51%; bottom: 0; 
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color:  transparent transparent #f6f6f6  ;
+    position: absolute;
+    
+    
+}
+
+
 
 .slider-content__wallpaper__left--bottom{
     display: block;
     background-color: #404040;
-    max-height: 72px;
-    max-width: 217px;
+    height: 72px;
+    width: 217px;
     position: absolute;
     top:353px;
+    line-height: 1.5em;
     
 }
 
 .slider__left__text{
     display: block;
-    outline: 1px solid red;
+    
     font-family: Bebas;
     font-size: 14px;
     color: #9a9a9a;
-    //padding: 8px 10px 0px 17px;
+    padding: 8px 17px 0px 17px;
 }
 
 .slider__left__text__bottom{
     display: block;
-    outline: 1px solid red;
+    
     font-family: Bebas;
     color: #fff;
     //float: left;
     font-size: 28px;
-    padding: 3px 10px 12px 17px;
+    padding: 1px 10px 12px 17px;
 }
 
+.slider-content__wallpaper__right--bottom{
+    position: absolute;
+    width: 115px;
+    line-height: 0;
+    font-size: 1px;
+    text-align: justify;
+    text-align-last: justify;
+    top: 406px;
+    left: 812px;
+}
 
+.right-bottom{
+    display: inline-block;
+    height: 5px;
+    width: 23px;
+    background-color: #fff;
+}
 
+.right-bottom.active{
+    background-color: #444444;
+}
+
+.slider-footer{
+    background-color: #f6f6f6;
+    display: block;
+    max-width: 940px;
+    margin: 0 auto;
+
+}
+
+.slider-footer__h3{
+    font-family: Bebas;
+    font-size: 1em;
+    color: #474747;
+    display: inline-block;
+    padding: 15px 0 11px 16px;
+}
+
+.slider-footer__p{
+    font-family: HelveticaNeue-Medium;
+    font-size: 0.75em;
+    color: #474747;
+    display: inline-block;
+    padding: 0 15px 17px 15px;
+}
