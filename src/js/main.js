@@ -1,4 +1,4 @@
-function test() {
+/*function test() {
     var eng = ['green', 'yellow', 'red', 'black'];
     var rus = ['зеленый', 'желтый', 'красный', 'черный'];
 
@@ -13,4 +13,4 @@ function test() {
     } while (confirm('continue?'));
 }
 
-test();
+test();*/
