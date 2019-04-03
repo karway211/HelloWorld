@@ -6,9 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/common-style.css">
     <script src="./js/main.js"></script>
+    <script>
+        function example(){
+           alert('Если Вы видите это сообщение, значит страница была полностью загружена.');
+        }
+        </script>
     <title>Document</title>
 </head>
-<body>
+<body onload='example()'>
+    <script>
+        document.write("Данный текст выведен на страницу с помощью JavaScript.");
+    </script>
 
+
+    <p id="par1">Нажмите на одну из кнопок ниже чтобы увидеть JavaScript в действии.</p>
+    <input type="button" value="Нажмите на меня 1" onclick="fun1()" />
+    <input type="button" value="Нажмите на меня 2" onclick="fun2()" />
+    <script type="text/javascript">
+    function fun1(){
+    alert("Данное сообщение было выведено с помощью JavaScript.");
+    }
+    function fun2(){
+    document.getElementById("par1").innerHTML="Содержимое данного элемента "+
+    "было изменено с помощью JavaScript.";
+    }
+    </script>
+
+<script>
+    function mesg() {
+       document.write('<p><b>Это абзац написанный жирным шрифтом.</b></p>');
+       document.write('<p><i>Это абзац написанный курсивным шрифтом.</i></p>');
+    }
+    </script>
+    <input type='button' value='Вызвать функцию' onclick='mesg()'/>
+
+    
 </body>
 </html>
