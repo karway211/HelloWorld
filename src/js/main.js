@@ -43,7 +43,7 @@ var myNumber = 2525,
     myNull = null,
     myUndef = undefined;
 
-    console.log(typeof myNumber);
+    console.log(typeof myNumber);//typeof определяет тип выражения
     console.log(typeof myString);
     console.log(typeof myBool);
     console.log(typeof myNull);
