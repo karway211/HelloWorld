@@ -1,4 +1,4 @@
-function test() {
+/*function test() {
     var eng = ['green', 'yellow', 'red', 'black'];
     var rus = ['зеленый', 'желтый', 'красный', 'черный'];
 
@@ -13,4 +13,28 @@ function test() {
     } while (confirm('continue?'));
 }
 
-test();
+test();*/
+
+var element = document.querySelector('h1');
+element.innerText = 'Привет мир';
+console.log('hell');
+
+
+/*создаем элемент */
+var ourElement;
+ourElement = document.createElement('div');
+ourElement.style.backgroundColor = 'red';
+ourElement.style.height = '100px';
+ourElement.style.outline = '1px solid green';
+ourElement.innerHTML = '<div><h1>Мы создали элемент</h1>';
+ourElement.className = 'test';
+
+
+/*добавляем элемент в HTML */
+var main = document.querySelector('body');
+main.appendChild(ourElement); /*appendChild добавляет к выбранной ноде ребенка */
+/*main.removeChild(ourElement); removeChild удаляет в выбранной ноде ребенка*/
+
+
+
+
