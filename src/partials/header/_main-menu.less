@@ -31,6 +31,10 @@
 
 }
 
+.main-menu__640px {
+    display: none;
+}
+
 .main-menu__item{
     display: flex;
     flex-direction: column;
@@ -77,6 +81,29 @@
         
         
     }
+
+    @media (max-width: 640px){
+        .main-menu {
+            display: none;
+        }
+        .main-menu__640px {
+            display: block;
+            position: relative;
+        }
+        .navigation {
+            position: absolute;
+            z-index: 2;
+            background-color: white;
+        }
+        .navigation, #go {
+            display:none;
+        }
+        #go:checked ~ .navigation {
+            display:block;
+        }
+        
+    
+        }
 
 
 
