@@ -1,16 +1,9 @@
-function test() {
-    var eng = ['green', 'yellow', 'red', 'black'];
-    var rus = ['зеленый', 'желтый', 'красный', 'черный'];
+var opener = document.querySelector('.burger-nav__opener');
+var items = document.querySelector('.burger-nav__items');
 
-    do {
-        var index = Math.floor(Math.random() * (eng.length - 1));
-        var answer = prompt(eng[index]);
-        if(rus[index] == answer) {
-            alert('You are cool guy!')
-        } else {
-            alert('Go to scoll!')
-        }
-    } while (confirm('continue?'));
+function toggleBurger() {
+    opener.classList.toggle('open');
+    items.classList.toggle('open');
 }
 
-test();
+opener.addEventListener('click', toggleBurger);
