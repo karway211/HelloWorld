@@ -1,8 +1,9 @@
 .burger-nav {
-    display: block;
+    display:flex;
     width: 250px;
     outline: 1px solid red;
     position: relative;
+    justify-content: flex-end;
 
     &__opener {
         width: 50px;
@@ -22,6 +23,7 @@
         position: absolute;
         width: 100%;
         background-color: white;
+        top: 50px;
 
         &.open {
             max-height: 500px;
