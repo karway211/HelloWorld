@@ -83,12 +83,10 @@
     }
 
     @media (max-width: 640px){
-        .header {
-            flex-direction: row-reverse;
-        }
+        
 
         .logo-Pacifico {
-            padding: 15px 8px 0 0;
+            padding: 15px 0 0 8px;
         }
         .main-menu {
             display: none;
@@ -96,7 +94,8 @@
        
 
         .burger-nav {
-            display: block;
+            display: flex;
+            justify-content: flex-end;
             width: 80%;
             position: relative;
             padding: 0 0 52px 0;
@@ -108,7 +107,7 @@
                 display: block;
                 width: 50px;
                 height: 50px;
-                margin: 30px 0 0 10px;
+                margin: 30px 10px 0 0 ;
                 border-radius: 20%;
                 background-color: #eaeaea;
                 position: relative;
@@ -128,6 +127,8 @@
                 &__layer::before,
                 &__layer::after {
                     content: '';
+                    display: block;
+                    transition: 0.2s;
                 }
 
                 &__layer::before {
@@ -160,6 +161,8 @@
                 position: absolute;
                 width: 100%;
                 background-color: white;
+                top: 80px;
+                
                 
         
                 &.open {
@@ -173,14 +176,37 @@
             display: block;
             font-size: 16px;
             padding: 5px 10px;
-            border-bottom: 2px solid grey;
+            border-bottom: 1px solid grey;
             text-decoration: none;
             text-align: center;
+            position: relative;
         }
 
-        /*.menu-item:last-child {
-            border-bottom: none;
-        }*/
+        .menu-item.selected::before{
+            content: ''; 
+                left: 0; top: 50%; 
+                transform: translateY(-50%);
+                width: 0; height: 0;
+                border: 10px solid transparent;	
+                border-left: 20px solid #ececec;
+                position: absolute;
+        }
+
+        .menu-item.selected::after{
+            content: ''; 
+                right: 0; top: 50%; 
+                transform: translateY(-50%);
+                width: 0; height: 0;
+                border: 10px solid transparent;	
+                border-right: 20px solid #ececec;	
+                position: absolute;
+        }
+
+
+
+        
+
+        
         
     }
 
