@@ -1,0 +1,120 @@
+.slider{
+	/*margin-top: 84px;
+	margin-bottom: 12px;*/
+	height: 425px;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider input{
+    display: none;	
+}
+
+.slider-content:hover .slides{
+	animation: none;	
+}
+.slider-content{
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: 940px;	
+}
+.slides {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+	-webkit-transition: transform ease-in-out .5s, opacity ease-in-out .5s; 
+	animation: slide;
+	animation-iteration-count: infinite;  
+	animation-duration: 24s;
+
+}
+
+.slide1 {
+	background: url("../../img/banner-1.jpg") no-repeat;
+	background-size: cover;
+	}
+.slide2 {
+	animation-delay: 6s;
+	background: url("../../img/banner-2.jpg") no-repeat;
+	background-size: cover;
+	}
+.slide3 {
+	background: url("../../img/banner-3.jpg") no-repeat;
+	animation-delay: 12s;
+	background-size: cover;
+}
+.slide4 {
+	background: url("../../img/banner-4.jpg") no-repeat;
+	animation-delay: 18s;
+	background-size: cover;
+}
+
+@keyframes slide {
+    0%   {opacity: 0.1;z-index: 0;transform: scale(1.5);}
+    40%  {opacity: 1;z-index: 1;transform: scale(1);}
+    60%  {opacity: 0.9;z-index: 1;transform: scale(1);}
+    85%  {opacity: 0.1;z-index: 1;transform: scale(1);}
+   100%  {opacity: 0;z-index: 0;transform: scale(1.5);}
+}
+
+.slider label:hover, 
+#slide1:checked ~ .select label:nth-of-type(1),
+#slide2:checked ~ .select label:nth-of-type(2),
+#slide3:checked ~ .select label:nth-of-type(3),
+#slide4:checked ~ .select label:nth-of-type(4){
+    background: #ddd;	
+}
+
+#slide1:checked ~ .slider-content > .slide1,
+#slide2:checked ~ .slider-content > .slide2,
+#slide3:checked ~ .slider-content > .slide3,
+#slide4:checked ~ .slider-content > .slide4{
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	opacity: 1;
+	z-index: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+
+.slider .button{
+	position: relative;
+	display: inline-block;
+	
+	width: 24px;
+	height: 5px;
+	background-color: #444444;
+	cursor: pointer;
+	margin: 0px 1px;
+	transition: background ease-in-out .5s;
+}
+
+.slider .select{
+	position: absolute;
+	top: 93.7%;
+	left: 86.1%;
+	z-index: 2;;
+}
+
+
+.select.button{
+   background-color: #fff;
+}
+
+@media (max-width: 939px) {
+    .slider {
+        display: none;
+    }
+}
