@@ -1,7 +1,7 @@
 .latest{
     display: block;
     max-width: 940px;
-    margin: 65px auto 66px auto;
+    margin: 65px auto 56px auto;
 }
 
 .latest__headline{
@@ -26,6 +26,7 @@
 
 .latest-work__project {
     max-width: 220px;
+    padding-bottom: 10px;
 }
 
 .latest-work__project__headline {
@@ -57,6 +58,16 @@
     font-size: 12px;
     padding-top: 10px;
     padding-left: 4px;  
+}
+
+.latest-work__project__expand:hover {
+    .latest-work__project__expand__link__span{
+        text-shadow: 1px 1px 0 #474747,
+                     1px -1px 0 #474747,
+                    -1px 1px 0 #474747,
+                    -1px -1px 0 #474747;
+        color: white;
+    }
 }
 
 .latest-work__project__expand__link__span {

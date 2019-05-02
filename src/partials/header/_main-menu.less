@@ -8,6 +8,16 @@
     
 }
 
+.logo:hover {
+    .logo-Pacifico{
+        text-shadow: 1px 1px 0 #474747,
+                     1px -1px 0 #474747,
+                    -1px 1px 0 #474747,
+                    -1px -1px 0 #474747;
+        color: white;
+    }
+}
+
 .logo-Pacifico {
     display: inline-block;
     font-family: Pacifico;
@@ -15,7 +25,7 @@
     color: #474747;
     text-decoration: none;
     text-transform: capitalize;
-    padding: 15px 0 0 8px;
+    padding: 15px 8px 0 8px;
     
 }
 
@@ -193,6 +203,26 @@
         }
 
         .menu-item.selected::after{
+            content: ''; 
+                right: 0; top: 50%; 
+                transform: translateY(-50%);
+                width: 0; height: 0;
+                border: 10px solid transparent;	
+                border-right: 20px solid #ececec;	
+                position: absolute;
+        }
+
+        .menu-item:hover::before{
+            content: ''; 
+                left: 0; top: 50%; 
+                transform: translateY(-50%);
+                width: 0; height: 0;
+                border: 10px solid transparent;	
+                border-left: 20px solid #ececec;
+                position: absolute;
+        }
+
+        .menu-item:hover::after{
             content: ''; 
                 right: 0; top: 50%; 
                 transform: translateY(-50%);
